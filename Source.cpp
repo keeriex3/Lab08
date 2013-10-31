@@ -10,6 +10,7 @@ text will be saved in a new file.
 using namespace std;
 
 void process(ifstream & in, ofstream & out);
+void highandlow(ifstream & in, ofstream & out);
 
 int main(){
 	/*Asks user for filenames for numbers and then only positive numbers
@@ -42,6 +43,8 @@ int main(){
 		exit(-2);
 	}
 	process(in, out);
+	//If you want to use highandlow funciton, comment out the proccess function and use highandlow.
+	//highandlow(in, out);
 	in.close();
 	out.close();
 	cout << "Look in " << outFileName << "for positive numbers\n";
